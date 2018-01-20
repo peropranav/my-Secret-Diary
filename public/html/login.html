@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Joti+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="../images/titleLog.png" type="image/gif" sizes="22x22">
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -35,7 +37,8 @@
 
         <div class="col-lg-4"></div>
         <div class="col-lg-6">
-            <h1 style="font-size: 50px;font-family: 'Berkshire Swash', cursive;color: white">LOGIN</h1>
+            <h1 style="font-size: 50px;font-family: 'Berkshire Swash', cursive;color: white">LOGIN <a href="signup"><button class="btn btn-success" style="float: right">SignUp</button></a></h1>
+
         </div>
 
     </div>
@@ -43,11 +46,12 @@
 <br>
 
 
+    <form action="/user/login" method="post">
 
-    <div class="row">
+        <div class="row">
                       <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <label class="fontInLogin">Username&nbsp;&nbsp;&nbsp;</label><input type="text" placeholder="Username">
+            <label class="fontInLogin">Username&nbsp;&nbsp;&nbsp;</label><input type="text" placeholder="Username" name="username">
 
         </div>
 
@@ -58,7 +62,7 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <label class="fontInLogin">Password&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="password" placeholder="Password">
+            <label class="fontInLogin">Password&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="password" placeholder="Password" name="password">
 
         </div>
 
@@ -71,14 +75,14 @@
     <div class="row">
         <div class="col-lg-5"></div>
         <div class="col-lg-4">
-            <button class="btn btn-success">Submit</button>
+            <button class="btn btn-success" type="submit">Login</button>
 
         </div>
 
 
     </div>
 <br><br>
-
+    </form>
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
