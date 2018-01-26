@@ -14,7 +14,13 @@ var userSchema = new Schema({
     clientSecret:
         {
           type:String
-        }
+        },
+        notes:
+            {
+                type:Array
+            }
+
+
 });
 
 

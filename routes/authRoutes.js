@@ -16,17 +16,21 @@ const router = require('express').Router();
 
 const publicPath = path.join(__dirname, '../public');
 
-router.get('/',function (req,res)
-{
+router.get('/', ensureAuthenticated, function(req, res){
+    res.redirect('/profile')
+});
 
-    //res.send("home page");
-    res.redirect('user/login')
+function ensureAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    } else {
+        //req.flash('error_msg','You are not logged in');
+        res.redirect('/user/login');
+    }
+}
+
+module.exports = router;
 
 
-})
 
 
-
-
-
-module.exports=router;
