@@ -4,6 +4,7 @@ NODEJS project, you can save as many notes as you want! Secured authentication t
 ## USED TECHNOLOGIES
 * express
 * nodeJs
+* mongoDB , mongoose
 * passportJs
 * ejs
 * many npm like cookie-parser etc.
