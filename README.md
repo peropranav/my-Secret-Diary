@@ -16,11 +16,11 @@ NODEJS project, you can save as many notes as you want! Secured authentication t
 
 
 ## About
-> Signup page will save the data to database with secured authentication using local passport strategy!
-> After login , you are directed to profile page, which will show no. of notes and name coming from database!
-> On dashboard all the notes saved by you will be displayed to you.
+* Signup page will save the data to database with secured authentication using local passport strategy!
+* After login , you are directed to profile page, which will show no. of notes and name coming from database!
+* On dashboard all the notes saved by you will be displayed to you.
 
 ## Future Add on
-> improve profile and dashboard design.
-> adding delete feature.
-> dragging of up-down notes.
+* improve profile and dashboard design.
+* adding delete feature.
+* dragging of up-down notes.
