@@ -7,7 +7,7 @@ NODEJS project, you can save as many notes as you want! Secured authentication t
 * passportJs
 * ejs
 * many npm like cookie-parser etc.
-How To Run:
+## How To Run:
 * install node from https://nodejs.org/en/
 * go the project dir and run `npm install`
 * go to dir server
