@@ -12,7 +12,7 @@ NODEJS project, you can save as many notes as you want! Secured authentication t
 * install node from https://nodejs.org/en/
 * install mongoDB from https://www.mongodb.com/
 * you have to set the path for mongo, create a folder name as mongoData
-* run the following ./mongod mongo/bin --dbpath ~"path for mongoData
+* run the following ./mongod mongo/bin --dbpath ~"path for mongoData"
 * go the project dir and run `npm install`
 * go to dir server
 * node server.js
