@@ -19,17 +19,48 @@ const router = require('express').Router();
 const publicPath = path.join(__dirname, '../public');
 
 
-router.get('/',function (req,res)
+router.get('/',ensureAuthenticated,function (req,res)
 {
+console.log(req.user.notes.length);
+res.render('profile',
+    {
+        basic: [
+            {
+                username: req.user.username
+            },
+            {
+                notesLength: req.user.notes.length
 
-res.render('profile.ejs')
+            }
+        ]
+    }
+
+    );
+
 })
 
 
-router.get('/dashboard',function (req,res)
+router.get('/dashboard',ensureAuthenticated,function (req,res)
 {
 
-res.send("on dashboard")
+res.render('dashboard',
+
+    {
+        notesToClient:[
+
+            {
+                notesLength: req.user.notes.length
+            },
+            {
+                notesToDisplay:req.user.notes
+            }
+
+
+
+        ]
+    }
+
+    )
 })
 
 
@@ -41,17 +72,34 @@ router.post('/',function (req,res) {
 //note is received now save to the matching user
 
     console.log(req.user);
+var id=req.user._id;
+var noteText=req.body.notepost;
+
+    User.findByIdAndUpdate(id,
+        { $push: { "notes" : noteText}} ,function(err,result)
+
+        {
+            if (err) return handleError(err);
 
 
+        }
+    );
 
-            User.findOne({username:req.user.username}).update({ $push: { "notes": noteText} });
 
             console.log(noteText);
-
-    })
 
     res.render('profile.ejs')
 
 })
 
+
+
+function ensureAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    } else {
+        //req.flash('error_msg','You are not logged in');
+        res.redirect('/user/login');
+    }
+}
 module.exports=router;

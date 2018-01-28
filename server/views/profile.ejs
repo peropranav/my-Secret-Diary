@@ -19,7 +19,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" style="color: black;font-weight: 600 ;font-size: larger ;margin-top: 15px;">Dashboard</a></li>
+                <li class="active"><a href="profile/dashboard" style="color: black;font-weight: 600 ;font-size: larger ;margin-top: 15px;">Dashboard</a></li>
 
                 <li><a href="user/logout"  style="color: black;font-weight: 600 ;font-size: larger;margin-top: 15px; background-color: white">Logout</a></li>
 
@@ -46,8 +46,14 @@
 
         <div class="col-lg-6">
 <h1>Welcome To Your Profile</h1>
+            <h1>How are you <span style="color: red"><%=basic[0].username%></span>?</h1>
+
             <br>
-           <h3>Total Notes Written:&nbsp;<span style="color: red">something from server</span></h3>
+           <h3>Total Notes Written:&nbsp;<span style="color: red"><%=basic[1].notesLength%></span></h3>
+
+            <br>
+
+            <img src="../public/images/profileImg1.jpg">
         </div>
         <div class="col-lg-6">
 <form method="post" action="profile">
