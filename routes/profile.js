@@ -88,7 +88,7 @@ var noteText=req.body.notepost;
 
             console.log(noteText);
 
-    res.render('profile.ejs')
+    res.redirect('/')
 
 })
 
